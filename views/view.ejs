@@ -15,17 +15,35 @@
               </nav>
               <div class="container">
                   <div class="row">
-                      <table class="table">            
+                  <div class ="col-lg-6">
+                                 
                          <% for (var i=0;i<name.length;i++){%>
-                             <tr><td><div class="card text-white bg-secondary mb-3">
+                             <div class="card text-white bg-secondary mb-3">
                               <div class="card-body">
                               <h3><%=name[i].title%></h3>
                              <h3><%=name[i].genre%></h3>
                              <h3><%=name[i].author%></h3>
                              <h3><%=name[i].DOP%></h3>
-</div></div></td></tr><%}%>  
-                      </table>
-                  </div>
-              </div>
+</div></div><%}%>  
+                  </div>  
+                  
+              
+        
+               
+               <div class="col-lg-6 ">
+                 <% for (var i=0;i<book.length;i++){%>
+                 <div class ="card text-white bg-secondary mb-3">
+                 <div class ="card-body">
+                 <h3><%=book[i].title%></h3>
+                 <h3><%=book[i].genre%></h3>
+                 <h3><%=book[i].author%></h3>
+                 <h3><%=book[i].DOP%></h3>
+                 </div>
+                 </div>
+                 <%}%>
+                 </div>
+                 </div>
+                 </div>
+                 
 </body>
 </html>

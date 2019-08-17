@@ -34,8 +34,11 @@ app1.set('view engine','ejs');
     genre:"Childrens novel",
     author:"Charles Dickens",
     DOP:"1839"
-},
-{
+}
+ ];
+
+
+book =[{
     title:"Angels & Demons",
     genre:"Sci-Fi",
     author:"Dan brown",
@@ -64,17 +67,18 @@ app1.set('view engine','ejs');
     genre:"fiction",
     author:"Khaled Hosseini",
     DOP:"2003"
-},
-
-
-
-
+}
 ];
+
+
+
+
+
 app1.get('/',(rq,rs)=>{
     rs.render("add");
 });
 app1.get('/view',(rq,rs)=>{
-    rs.render("view",name);
+    rs.render("view",{name,book});
 });
 app1.listen(process.env.PORT|| 3003,()=>{
     console.log("server running")
